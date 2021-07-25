@@ -24,9 +24,7 @@
 ## Overview
 
 Sailboat Listings - Buy and sell your sailboat
-"The happiest two days of boat ownership are the day you buy a boat and the day you sell it."  - Unknown Sailor  
-
-.Let us help you with both!
+"The happiest two days of boat ownership are the day you buy a boat and the day you sell it."  - Unknown Sailor
 
 <br>
 
@@ -53,46 +51,29 @@ Website that allows users to register a profile to create and post their sailboa
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Rails      | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       |  |
+|   React Router   |  |
+| React SemanticUI |  |
+|     Rails      |  |
 
 <br>
 
 ### Client (Front End)
 
+<br>
+
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+[Wireframe Link](https://www.figma.com/file/GToCkNhmICl0DwQar7UJLV/Untitled?node-id=0%3A1)
 
-![Dummy Link](url)
+<br>
 
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 ### Component Heirarchy 
 
 [Component Tree](https://whimsical.com/UrpSqy2CL8Fb7X5pXV5DEQ@2Ux7TurymMxyV1Zo3ZsD)
+
+<br>
 
 #### Component Architecture 
 
@@ -140,7 +121,7 @@ src
 ### ERD Model
 <br>
 
-[ERD](https://i.imgur.com/1IE3RW4.png)
+[ERD](https://i.imgur.com/nXrfNvS.png)
 
 <br>
 
