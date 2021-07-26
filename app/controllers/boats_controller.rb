@@ -46,6 +46,6 @@ class BoatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def boat_params
-      params.require(:boat).permit(:make, :model, :designer, :loa, :build_year, :price)
+      params.require(:boat).permit(:make_id, :model, :designer, :loa, :build_year, :price, :user_id)
     end
 end
