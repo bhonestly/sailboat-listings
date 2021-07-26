@@ -35,3 +35,12 @@ export const updateBoat = async (id, boat) => {
       throw error
   }
 }
+
+export const deleteBoat = async id => {
+  try {
+      const response = await api.delete(`/boats/${id}`)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
