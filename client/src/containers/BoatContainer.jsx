@@ -11,6 +11,12 @@ export default function BoatContainer() {
 	const [boatList, setBoatList] = useState([]);
 	const history = useHistory();
 
-
-  
+  useEffect(() => {
+		const fetchBoats = async () => {
+			const boatData = await getAllBoats();
+			setBoatList(boatData);
+		};
+		fetchBoats();
+	}, []);
 }
+
