@@ -17,3 +17,12 @@ export const getBoat = async id => {
       throw error
   }
 }
+
+export const createBoat = async boat => {
+  try {
+      const response = await api.post('/boats', boat)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
