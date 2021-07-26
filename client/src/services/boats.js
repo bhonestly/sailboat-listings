@@ -8,3 +8,12 @@ export const getAllBoats = async () => {
       throw error
   }
 }
+
+export const getBoat = async id => {
+  try {
+      const response = await api.get(`/boats/${id}`)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
