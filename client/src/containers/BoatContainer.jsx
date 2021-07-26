@@ -20,3 +20,9 @@ export default function BoatContainer() {
 	}, []);
 }
 
+const handleCreate = async (formData) => {
+  const boatData = await postBoat(formData);
+  setBoatList((prevState) => [...prevState, boatData]);
+  history.push('/boats');
+};
+
