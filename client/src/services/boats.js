@@ -26,3 +26,12 @@ export const createBoat = async boat => {
       throw error
   }
 }
+
+export const updateBoat = async (id, boat) => {
+  try {
+      const response = await api.put(`/boats/${id}`, boat)
+      return response.data
+  } catch (error) {
+      throw error
+  }
+}
