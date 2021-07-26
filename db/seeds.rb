@@ -31,6 +31,62 @@ User.destroy_all
   price: '9500'
 )
 
+@make=Make.create(
+  name: 'Ranger'
+)
+
+@boat=Boat.create(
+  make_id: @make.id,
+  user_id: @user.id,
+  model: '22',
+  designer: 'Jensen',
+  loa: '21.5',
+  build_year: '1978',
+  price: '2500'
+)
+
+@make=Make.create(
+  name: 'Balance'
+)
+
+@boat=Boat.create(
+  make_id: @make.id,
+  user_id: @user.id,
+  model: '525',
+  designer: 'Balance',
+  loa: '52.5',
+  build_year: '2021',
+  price: '1,600,000'
+)
+
+@make=Make.create(
+  name: 'Laser'
+)
+
+@boat=Boat.create(
+  make_id: @make.id,
+  user_id: @user.id,
+  model: 'Laser',
+  designer: 'Bruce Kirby',
+  loa: '11.5',
+  build_year: '2021',
+  price: '7,300'
+)
+
+@make=Make.create(
+  name: 'Westsail'
+)
+
+@boat=Boat.create(
+  make_id: @make.id,
+  user_id: @user.id,
+  model: '32',
+  designer: 'William Atkin',
+  loa: '32',
+  build_year: '1980',
+  price: '30,000'
+)
+
 puts "#{User.count} user(s) created"
 puts "#{Boat.count} boat(s) created"
 puts "#{Make.count} make(s) created"
