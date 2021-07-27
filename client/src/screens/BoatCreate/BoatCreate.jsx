@@ -70,6 +70,15 @@ export default function BoatCreate() {
             required
             onChange={handleChange}
           />
+          <br />
+          <input
+            className='create-input-loa'
+            placeholder='LOA'
+            value={boat.loa}
+            name='loa'
+            required
+            onChange={handleChange}
+          />
       </form>
     </div>
   )
