@@ -11,17 +11,19 @@ Boat.destroy_all
 Make.destroy_all
 User.destroy_all
 
-@user=User.create(
+@user = User.create(
   username: 'ernest',
   email: 'ernestbizzell@gmail.com',
   password_digest: '123456'
 )
 
-@make=Make.create(
+@make = Make.create(
   name: 'Lancer'
 )
 
-@boat=Boat.create(
+@boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: '30-5',
@@ -31,11 +33,13 @@ User.destroy_all
   price: '9500'
 )
 
-@make=Make.create(
+@make = Make.create(
   name: 'Ranger'
 )
 
-@boat=Boat.create(
+@boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: '22',
@@ -45,11 +49,13 @@ User.destroy_all
   price: '2500'
 )
 
-@make=Make.create(
+@make = Make.create(
   name: 'Balance'
 )
 
-@boat=Boat.create(
+@boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: '525',
@@ -59,11 +65,13 @@ User.destroy_all
   price: '1,600,000'
 )
 
-@make=Make.create(
+@make = Make.create(
   name: 'Laser'
 )
 
-@boat=Boat.create(
+@boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: 'Laser',
@@ -73,11 +81,13 @@ User.destroy_all
   price: '7,300'
 )
 
-@make=Make.create(
+@make = Make.create(
   name: 'Westsail'
 )
 
-@boat=Boat.create(
+@boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: '32',

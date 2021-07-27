@@ -7,7 +7,7 @@ import BoatCreate from '../screens/BoatCreate/BoatCreate';
 import BoatEdit from '../screens/BoatEdit/BoatEdit';
 import BoatDetail from '../screens/BoatDetail/BoatDetail';
 
-export default function MainContainer() {
+export default function BoatContainer() {
   const [boatList, setBoatList] = useState([]);
   const history = useHistory();
 
@@ -22,7 +22,7 @@ export default function MainContainer() {
   const handleCreate = async (formData) => {
     const boatData = await createBoat(formData);
     setBoatList((prevState) => [...prevState, boatData]);
-    history.push('/boats');
+    history.push('/');
   };
 
   const handleUpdate = async (id, formData) => {
@@ -32,7 +32,7 @@ export default function MainContainer() {
         return boat.id === Number(id) ? boatData : boat;
       })
     );
-    history.push('/boats');
+    history.push('/');
   };
 
   const handleDelete = async (id) => {
@@ -42,18 +42,18 @@ export default function MainContainer() {
 
   return (
     <Switch>
+      <Route exact path='/'>
+        <BoatBrowse boatList={boatList} handleDelete={handleDelete} />
+      </Route>
       <Route path='/boats/:id/edit'>
         <BoatEdit boatList={boatList} handleUpdate={handleUpdate} />
       </Route>
       <Route path='/boats/new'>
-        <BoatCreate handleCreate={handleCreate} />
+        <BoatCreate handleSubmit={handleCreate} />
       </Route>
       <Route path='/boats/:id'>
-        <BoatDetail/>
-        </Route>
-        <Route path='/boats'>
-          <BoatBrowse boatList={boatList} handleDelete={handleDelete} />
-        </Route>
+        <BoatDetail />
+      </Route>
     </Switch>
   );
 }
