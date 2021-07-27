@@ -22,7 +22,8 @@ User.destroy_all
 )
 
 @boat = Boat.create(
-  imgURL: 'https://i.imgur.com/WOuLNA2.jpg',
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: '30-5',
@@ -37,6 +38,8 @@ User.destroy_all
 )
 
 @boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: '22',
@@ -51,6 +54,8 @@ User.destroy_all
 )
 
 @boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: '525',
@@ -65,6 +70,8 @@ User.destroy_all
 )
 
 @boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: 'Laser',
@@ -79,6 +86,8 @@ User.destroy_all
 )
 
 @boat = Boat.create(
+  img_url: 'https://i.imgur.com/WOuLNA2.jpg',
+  description: 'get rid of this boat',
   make_id: @make.id,
   user_id: @user.id,
   model: '32',

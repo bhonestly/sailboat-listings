@@ -39,6 +39,7 @@ export default function BoatCreate() {
   // if (!user) {
   //   return <BoatBrowse />
   // } else 
+  // wrap second return in layout tag
   return (
     <div className='boat-create'>
       <form className='create-form' onSubmit={handleSubmit}>
@@ -101,7 +102,7 @@ export default function BoatCreate() {
           <input
             className='create-input-image-link'
             placeholder='Image URL'
-            value={boat.imgURL}
+            value={boat.img_url}
             name='imgURL'
             required
             onChange={handleChange}
