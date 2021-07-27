@@ -52,7 +52,15 @@ export default function BoatCreate() {
             autoFocus
             onChange={handleChange}
           />
-          
+          <br />
+          <input
+            className='create-input-model'
+            placeholder='Model'
+            value={boat.model}
+            name='model'
+            required
+            onChange={handleChange}
+          />
       </form>
     </div>
   )
