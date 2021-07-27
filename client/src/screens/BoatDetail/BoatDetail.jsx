@@ -48,3 +48,5 @@ export default function BoatDetail() {
 //   loa: '29.5',
 //   build_year: '1985',
 //   price: '9500'
+//   imageURL: '',
+//   description: ''

@@ -36,12 +36,24 @@ export default function BoatCreate() {
     return <Redirect to={`/boats`} />
   }
 
-  if (!user) {
-    return <BoatBrowse />
-
+  // if (!user) {
+  //   return <BoatBrowse />
+  // } else 
   return (
-    <div>
-      
+    <div className='boat-create'>
+      <form className='create-form' onSubmit={handleSubmit}>
+      <div className='create-form-title'>Create a New Boat</div>
+      <input
+            className='create-input-make'
+            placeholder='Make'
+            value={boat.make}
+            name='make'
+            required
+            autoFocus
+            onChange={handleChange}
+          />
+          
+      </form>
     </div>
   )
 }
