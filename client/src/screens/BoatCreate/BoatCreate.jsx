@@ -79,6 +79,16 @@ export default function BoatCreate() {
             required
             onChange={handleChange}
           />
+          <br />
+          <input
+            className='create-input-build-year'
+            placeholder='Build Year'
+            value={boat.build_year}
+            name='build_year'
+            required
+            onChange={handleChange}
+          />
+          
       </form>
     </div>
   )
