@@ -5,6 +5,7 @@ import { useHistory, Switch, Route } from 'react-router-dom';
 import { loginUser, registerUser, verifyUser, removeToken } from './services/auth';
 import Login from './screens/Login/Login'
 import SignUp from './screens/SignUp/SignUp'
+import Nav from './components/Nav/Nav'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -37,6 +38,7 @@ function App() {
   }
   return (
     <div className="App">
+      <Nav user={currentUser} handleLogout={handleLogout} />
       <Switch>
         <Route path='/login'>
           <Login handleLogin={handleLogin} />
