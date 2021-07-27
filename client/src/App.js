@@ -6,6 +6,7 @@ import { loginUser, registerUser, verifyUser, removeToken } from './services/aut
 import Login from './screens/Login/Login'
 import SignUp from './screens/SignUp/SignUp'
 import Nav from './components/Nav/Nav'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -50,6 +51,7 @@ function App() {
           <BoatContainer currentUser={currentUser} />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }
