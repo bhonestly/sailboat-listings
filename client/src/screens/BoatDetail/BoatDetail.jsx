@@ -25,9 +25,12 @@ export default function BoatDetail() {
 
       <img className="boat-picture" src={boat.boatPicture ? boat.boatPicture : 'https://i.imgur.com/z5s9hjl.jpg'} alt={boat.title} />
 
+      <img className="boat-picture" src={boat.imgURL} alt={boat.make} />
+
+
       <div className="info-card">
         <div className="boat-details">
-        Make: {boat.make_id} <br /> Model: {boat.model} <br /> Designer: {boat.designer} <br /> Length Overall: {boat.loa} <br /> Built: {boat.build_year} <br /> Price:{" "} <span className="price">${boat.price}</span>
+        Make: {boat.make.name} <br /> Model: {boat.model} <br /> Designer: {boat.designer} <br /> Length Overall: {boat.loa} <br /> Built: {boat.build_year} <br /> Price:{" "} <span className="price">${boat.price}</span>
         </div>
         <div className="description-card">
           <div className="detail-description">{boat.description}</div>

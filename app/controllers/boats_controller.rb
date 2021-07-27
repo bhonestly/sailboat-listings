@@ -4,13 +4,14 @@ class BoatsController < ApplicationController
   # GET /boats
   def index
     @boats = Boat.all
-
-    render json: @boats
+    render json: @boats,
+  include: :make
   end
 
   # GET /boats/1
   def show
-    render json: @boat
+    render json: @boat,
+  include: :make
   end
 
   # POST /boats

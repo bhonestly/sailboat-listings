@@ -7,14 +7,14 @@ export default function BoatBrowse({boatList}) {
   return (
     <div>
       {boatList && boatList.map(boat => {
-        const {model, build_year, loa, designer, id, make_id} = boat || {}
+        const {model, build_year, loa, designer, id, make} = boat || {}
         return(
           <Link to={`/boats/${id}`}>
             <h1>{model}</h1>
             <h1>{build_year}</h1>
             <h1>{loa}</h1>
             <h1>{designer}</h1>
-            <h1>{make_id}</h1>
+            <h1>{make.name}</h1>
           </Link>
         )
       })}
