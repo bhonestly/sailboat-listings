@@ -32,27 +32,28 @@ export default function BoatContainer() {
         return boat.id === Number(id) ? boatData : boat;
       })
     );
-    history.push('/');
+    history.push(`/boats/${id}`);
   };
 
   const handleDelete = async (id) => {
     await deleteBoat(id);
     setBoatList((prevState) => prevState.filter((boat) => boat.id !== id));
+    history.push('/');
   };
 
   return (
     <Switch>
       <Route exact path='/'>
-        <BoatBrowse boatList={boatList} handleDelete={handleDelete} />
+        <BoatBrowse boatList={boatList} />
       </Route>
       <Route path='/boats/:id/edit'>
-        <BoatEdit boatList={boatList} handleUpdate={handleUpdate} />
+        <BoatEdit boatList={boatList} handleSubmit={handleUpdate} />
       </Route>
       <Route path='/boats/new'>
         <BoatCreate handleSubmit={handleCreate} />
       </Route>
       <Route path='/boats/:id'>
-        <BoatDetail />
+        <BoatDetail handleDelete={handleDelete} />
       </Route>
     </Switch>
   );

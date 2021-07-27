@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Redirect } from 'react-router-dom'
-// import BoatBrowse from '../BoatBrowse/BoatBrowse'
 import { getAllMakes } from '../../services/makes'
 
 export default function BoatCreate({ handleSubmit }) {
@@ -60,7 +58,7 @@ export default function BoatCreate({ handleSubmit }) {
         <div className='create-form-title'>Create a New Boat</div>
         <select
           className='create-input-make'
-          value={boat.make}
+          value={boat.make_id}
           name='make_id'
           required
           onChange={handleChange}
