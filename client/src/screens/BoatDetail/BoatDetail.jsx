@@ -23,17 +23,22 @@ export default function BoatDetail() {
   return (
     <div className="detail-container">
 
-{/* <img className="boat-picture" src={boat.boatPicture ? boat.boatPicture : 'https://i.imgur.com/z5s9hjl.jpg'} alt={boat.title} /> */}
+      {/* <img className="boat-picture" src={boat.boatPicture ? boat.boatPicture : 'https://i.imgur.com/z5s9hjl.jpg'} alt={boat.title} /> */}
 
-      <img className="boat-picture" src={boat.imgURL} alt={boat.make} />
+      <img className="boat-picture" src={boat.img_url} alt={boat.model} />
 
 
       <div className="info-card">
         <div className="boat-details">
-        Make: {boat.make.name} <br /> Model: {boat.model} <br /> Designer: {boat.designer} <br /> Length Overall: {boat.loa} <br /> Built: {boat.build_year} <br /> Price:{" "} <span className="price">${boat.price}</span>
+          <p> Make: {boat.make.name} </p>
+          <p> Model: {boat.model} </p>
+          <p> Designer: {boat.designer} </p>
+          <p> Length Overall: {boat.loa} </p>
+          <p> Built: {boat.build_year} </p>
+          <p> Price:{boat.price}</p>
         </div>
         <div className="description-card">
-          <div className="detail-description">{boat.description}</div>
+          <div className="detail-description">Description: {boat.description}</div>
         </div>
       </div>
     </div>

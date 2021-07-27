@@ -42,7 +42,7 @@ export default function BoatContainer() {
 
   return (
     <Switch>
-      <Route path='/'>
+      <Route exact path='/'>
         <BoatBrowse boatList={boatList} handleDelete={handleDelete} />
       </Route>
       <Route path='/boats/:id/edit'>
