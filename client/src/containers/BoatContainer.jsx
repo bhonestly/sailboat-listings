@@ -32,7 +32,7 @@ export default function BoatContainer() {
         return boat.id === Number(id) ? boatData : boat;
       })
     );
-    history.push('/');
+    history.push(`/boats/${id}`);
   };
 
   const handleDelete = async (id) => {
@@ -46,7 +46,7 @@ export default function BoatContainer() {
         <BoatBrowse boatList={boatList} handleDelete={handleDelete} />
       </Route>
       <Route path='/boats/:id/edit'>
-        <BoatEdit boatList={boatList} handleUpdate={handleUpdate} />
+        <BoatEdit boatList={boatList} handleSubmit={handleUpdate} />
       </Route>
       <Route path='/boats/new'>
         <BoatCreate handleSubmit={handleCreate} />

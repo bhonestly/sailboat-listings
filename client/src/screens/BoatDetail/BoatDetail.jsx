@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getBoat } from '../../services/boats';
 
 export default function BoatDetail() {
@@ -41,6 +41,9 @@ export default function BoatDetail() {
           <div className="detail-description">Description: {boat.description}</div>
         </div>
       </div>
+      <Link to={`/boats/${boat.id}/edit`}>
+      <button>EDIT</button>
+      </Link>
     </div>
   )
 }

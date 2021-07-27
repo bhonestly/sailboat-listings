@@ -4,14 +4,12 @@ class BoatsController < ApplicationController
   # GET /boats
   def index
     @boats = Boat.all
-    render json: @boats,
-           include: :make
+    render json: @boats, include: :make
   end
 
   # GET /boats/1
   def show
-    render json: @boat,
-           include: :make
+    render json: @boat, include: :make
   end
 
   # POST /boats
@@ -28,7 +26,7 @@ class BoatsController < ApplicationController
   # PATCH/PUT /boats/1
   def update
     if @boat.update(boat_params)
-      render json: @boat
+      render json: @boat, include: :make
     else
       render json: @boat.errors, status: :unprocessable_entity
     end
