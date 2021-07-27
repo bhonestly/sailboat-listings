@@ -88,7 +88,24 @@ export default function BoatCreate() {
             required
             onChange={handleChange}
           />
-          
+          <br />
+          <input
+            className='create-input-price'
+            placeholder='Price'
+            value={boat.price}
+            name='price'
+            required
+            onChange={handleChange}
+          />
+          <br />
+          <input
+            className='create-input-image-link'
+            placeholder='Image URL'
+            value={boat.imgURL}
+            name='imgURL'
+            required
+            onChange={handleChange}
+          />
       </form>
     </div>
   )
