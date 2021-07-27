@@ -23,7 +23,7 @@ export default function BoatDetail() {
   return (
     <div className="detail-container">
 
-      <img className="boat-picture" src={boat.boatPicture ? boat.boatPicture : 'https://i.imgur.com/z5s9hjl.jpg'} alt={boat.title} />
+{/* <img className="boat-picture" src={boat.boatPicture ? boat.boatPicture : 'https://i.imgur.com/z5s9hjl.jpg'} alt={boat.title} /> */}
 
       <img className="boat-picture" src={boat.imgURL} alt={boat.make} />
 

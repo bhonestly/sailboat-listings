@@ -1,17 +1,17 @@
 class BoatsController < ApplicationController
-  before_action :set_boat, only: [:show, :update, :destroy]
+  before_action :set_boat, only: %i[show update destroy]
 
   # GET /boats
   def index
     @boats = Boat.all
     render json: @boats,
-  include: :make
+           include: :make
   end
 
   # GET /boats/1
   def show
     render json: @boat,
-  include: :make
+           include: :make
   end
 
   # POST /boats
@@ -40,13 +40,14 @@ class BoatsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_boat
-      @boat = Boat.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def boat_params
-      params.require(:boat).permit(:make_id, :model, :designer, :loa, :build_year, :price, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_boat
+    @boat = Boat.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def boat_params
+    params.require(:boat).permit(:make_id, :model, :designer, :loa, :build_year, :price, :user_id)
+  end
 end
