@@ -1,11 +1,13 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Redirect } from 'react-router-dom'
 import { createBoat } from '../../services/boats'
 // import BoatBrowse from '../BoatBrowse/BoatBrowse'
+import { getAllMakes } from '../../services/makes'
 
 export default function BoatCreate() {
   const [isCreated, setCreated] = useState(false)
+  const [makes, setMakes] = useState([])
 
   const [boat, setBoat] = useState({
     img_url: '',
@@ -17,6 +19,14 @@ export default function BoatCreate() {
     price: '',
     description: '',
   })
+
+  useEffect (() => {
+    const fetchMakes = async () => {
+      const res = await getAllMakes();
+      setMakes(res)
+    }
+    fetchMakes();
+  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target
