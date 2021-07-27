@@ -61,6 +61,15 @@ export default function BoatCreate() {
             required
             onChange={handleChange}
           />
+          <br />
+          <input
+            className='create-input-designer'
+            placeholder='Designer'
+            value={boat.designer}
+            name='designer'
+            required
+            onChange={handleChange}
+          />
       </form>
     </div>
   )
