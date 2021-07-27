@@ -1,16 +1,7 @@
-// import "./Nav.css";
+import "../../assets/css/components/Nav/Nav.css";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 
-const Nav = ({ user, handleLogout }) => {
-  const [menu, setMenu] = useState('closed');
-  const handleChange = () => {
-    if (menu === 'closed') {
-      setMenu('open');
-    } else {
-      setMenu('closed');
-    }
-  }
+const Nav = ({ user, handleLogout }) => {  
 
   return (
     <nav>
