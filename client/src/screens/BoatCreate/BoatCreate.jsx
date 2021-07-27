@@ -116,6 +116,9 @@ export default function BoatCreate() {
             required
             onChange={handleChange}
           />
+          <button type='submit' className='create-submit-button'>
+            CREATE
+          </button>
       </form>
     </div>
   )
