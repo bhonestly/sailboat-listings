@@ -15,7 +15,7 @@ export default function BoatBrowse({boatList}) {
             <h1>{build_year}</h1>
             <h1>{loa}</h1>
             <h1>{designer}</h1>
-            <h1>{make.name}</h1>
+            <h1>{make?.name}</h1>
           </Link>
         )
       })}

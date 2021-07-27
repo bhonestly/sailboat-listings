@@ -22,7 +22,7 @@ export default function BoatContainer() {
   const handleCreate = async (formData) => {
     const boatData = await createBoat(formData);
     setBoatList((prevState) => [...prevState, boatData]);
-    history.push('/boats');
+    history.push('/');
   };
 
   const handleUpdate = async (id, formData) => {
@@ -32,7 +32,7 @@ export default function BoatContainer() {
         return boat.id === Number(id) ? boatData : boat;
       })
     );
-    history.push('/boats');
+    history.push('/');
   };
 
   const handleDelete = async (id) => {
@@ -49,7 +49,7 @@ export default function BoatContainer() {
         <BoatEdit boatList={boatList} handleUpdate={handleUpdate} />
       </Route>
       <Route path='/boats/new'>
-        <BoatCreate handleCreate={handleCreate} />
+        <BoatCreate handleSubmit={handleCreate} />
       </Route>
       <Route path='/boats/:id'>
         <BoatDetail />

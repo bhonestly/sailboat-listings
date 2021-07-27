@@ -19,7 +19,7 @@ class BoatsController < ApplicationController
     @boat = Boat.new(boat_params)
 
     if @boat.save
-      render json: @boat, status: :created, location: @boat
+      render json: @boat, include: :make, status: :created, location: @boat
     else
       render json: @boat.errors, status: :unprocessable_entity
     end

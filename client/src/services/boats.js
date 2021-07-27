@@ -25,7 +25,7 @@ export const createBoat = async boat => {
   console.log("createboatisrunning")
 
   try {
-      const response = await api.post('/boats', boat)
+      const response = await api.post('/boats', {boat})
       return response.data
   } catch (error) {
       throw error
@@ -36,7 +36,7 @@ export const updateBoat = async (id, boat) => {
   console.log("updateboatisrunning")
 
   try {
-      const response = await api.put(`/boats/${id}`, boat)
+    const response = await api.put(`/boats/${id}`, {boat})
       return response.data
   } catch (error) {
       throw error
