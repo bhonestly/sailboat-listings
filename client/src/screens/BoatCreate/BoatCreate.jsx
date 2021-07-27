@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import { createBoat } from '../../services/boats'
-import BoatBrowse from '../BoatBrowse/BoatBrowse'
+// import BoatBrowse from '../BoatBrowse/BoatBrowse'
 
 export default function BoatCreate() {
   const [isCreated, setCreated] = useState(false)

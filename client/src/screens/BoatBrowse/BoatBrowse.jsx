@@ -6,10 +6,11 @@ export default function BoatBrowse({boatList}) {
   console.log('hello')
   return (
     <div>
-      {boatList && boatList.map(boat => {
-        const {model, build_year, loa, designer, id, make} = boat || {}
+      {boatList.map(boat => {
+        const {model, build_year, loa, designer, id, make, img_url} = boat
         return(
-          <Link to={`/boats/${id}`}>
+          <Link to={`/boats/${id}`} key={id}>
+            <img src={img_url} alt={model}/>
             <h1>{model}</h1>
             <h1>{build_year}</h1>
             <h1>{loa}</h1>

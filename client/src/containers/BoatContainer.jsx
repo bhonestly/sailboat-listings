@@ -7,7 +7,7 @@ import BoatCreate from '../screens/BoatCreate/BoatCreate';
 import BoatEdit from '../screens/BoatEdit/BoatEdit';
 import BoatDetail from '../screens/BoatDetail/BoatDetail';
 
-export default function MainContainer() {
+export default function BoatContainer() {
   const [boatList, setBoatList] = useState([]);
   const history = useHistory();
 
@@ -42,6 +42,9 @@ export default function MainContainer() {
 
   return (
     <Switch>
+      <Route path='/'>
+        <BoatBrowse boatList={boatList} handleDelete={handleDelete} />
+      </Route>
       <Route path='/boats/:id/edit'>
         <BoatEdit boatList={boatList} handleUpdate={handleUpdate} />
       </Route>
@@ -49,11 +52,8 @@ export default function MainContainer() {
         <BoatCreate handleCreate={handleCreate} />
       </Route>
       <Route path='/boats/:id'>
-        <BoatDetail/>
-        </Route>
-        <Route path='/boats'>
-          <BoatBrowse boatList={boatList} handleDelete={handleDelete} />
-        </Route>
+        <BoatDetail />
+      </Route>
     </Switch>
   );
 }
