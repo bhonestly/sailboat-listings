@@ -8,7 +8,7 @@ export default function BoatCreate() {
   const [isCreated, setCreated] = useState(false)
 
   const [boat, setBoat] = useState({
-    imgURL: '',
+    img_url: '',
     build_year: '',
     make: '',
     model: '',
@@ -103,7 +103,7 @@ export default function BoatCreate() {
             className='create-input-image-link'
             placeholder='Image URL'
             value={boat.img_url}
-            name='imgURL'
+            name='img_url'
             required
             onChange={handleChange}
           />
