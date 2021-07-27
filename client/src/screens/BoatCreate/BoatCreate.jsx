@@ -106,6 +106,16 @@ export default function BoatCreate() {
             required
             onChange={handleChange}
           />
+          <br />
+          <textarea
+            className='create-textarea-description'
+            rows={10}
+            placeholder='Description'
+            value={boat.description}
+            name='description'
+            required
+            onChange={handleChange}
+          />
       </form>
     </div>
   )
