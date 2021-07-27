@@ -20,21 +20,27 @@ export default function BoatEdit({ handleSubmit, boatList }) {
   const { id } = useParams()
 
   useEffect(() => {
-    const oneBoatEdit = boatList.find((b) => {
-      return b.id === Number(id)
-    })
-    setBoat({
-      img_url: oneBoatEdit.img_url,
-      build_year: oneBoatEdit.build_year,
-      make_id: oneBoatEdit.make_id,
-      model: oneBoatEdit.model,
-      loa: oneBoatEdit.loa,
-      designer: oneBoatEdit.designer,
-      price: oneBoatEdit.price,
-      description: oneBoatEdit.description,
-      user_id: 1
-    })
-  }, [])
+    const prefillBoatData = () => {
+      const oneBoatEdit = boatList.find((b) => {
+        return b.id === Number(id)
+      })
+      setBoat({
+        img_url: oneBoatEdit.img_url,
+        build_year: oneBoatEdit.build_year,
+        make_id: oneBoatEdit.make_id,
+        model: oneBoatEdit.model,
+        loa: oneBoatEdit.loa,
+        designer: oneBoatEdit.designer,
+        price: oneBoatEdit.price,
+        description: oneBoatEdit.description,
+        user_id: 1
+      })
+    }
+    if (boatList.length) {
+      prefillBoatData()
+    }
+  }, [boatList])
+
 
   useEffect(() => {
     const fetchMakes = async () => {
@@ -70,10 +76,9 @@ export default function BoatEdit({ handleSubmit, boatList }) {
           name='make_id'
           required
           onChange={handleChange}
-          defaultValue='default'
         >
           {/* need to fix default value */}
-          <option disabled value='default'>Select</option>
+
           {makes.map(make => {
             return <option key={make.id} value={make.id}>{make.name}</option>
           })}
@@ -143,7 +148,7 @@ export default function BoatEdit({ handleSubmit, boatList }) {
           onChange={handleChange}
         />
         <button type='submit' className='create-submit-button'>
-          CREATE
+          EDIT
         </button>
       </form>
     </div>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getBoat } from '../../services/boats';
 
-export default function BoatDetail() {
+export default function BoatDetail({ handleDelete }) {
   const [boat, setBoat] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
@@ -22,12 +22,7 @@ export default function BoatDetail() {
 
   return (
     <div className="detail-container">
-
-      {/* <img className="boat-picture" src={boat.boatPicture ? boat.boatPicture : 'https://i.imgur.com/z5s9hjl.jpg'} alt={boat.title} /> */}
-
       <img className="boat-picture" src={boat.img_url} alt={boat.model} />
-
-
       <div className="info-card">
         <div className="boat-details">
           <p> Make: {boat.make.name} </p>
@@ -41,20 +36,12 @@ export default function BoatDetail() {
           <div className="detail-description">Description: {boat.description}</div>
         </div>
       </div>
-      <Link to={`/boats/${boat.id}/edit`}>
-      <button>EDIT</button>
-      </Link>
+      <div className="details-buttons">
+        <Link to={`/boats/${boat.id}/edit`}>
+          <button>EDIT</button>
+        </Link>
+        <button onClick={() => handleDelete(boat.id)}>DELETE</button>
+      </div>
     </div>
   )
 }
-
-// @boat=Boat.create(
-//   make_id: @make.id,
-//   user_id: @user.id,
-//   model: '30-5',
-//   designer: 'C&C',
-//   loa: '29.5',
-//   build_year: '1985',
-//   price: '9500'
-//   imageURL: '',
-//   description: ''
