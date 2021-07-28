@@ -39,7 +39,7 @@ export default function BoatEdit({ handleSubmit, boatList }) {
     if (boatList.length) {
       prefillBoatData()
     }
-  }, [boatList])
+  }, [boatList])// eslint-disable-line
 
 
   useEffect(() => {

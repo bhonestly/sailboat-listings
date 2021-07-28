@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { getAllMakes } from '../../services/makes'
 
 export default function BoatCreate({ handleSubmit }) {
-  const [isCreated, setCreated] = useState(false)
+  const [isCreated, setCreated] = useState(false)// eslint-disable-line
   const [makes, setMakes] = useState([])
 
   const [boat, setBoat] = useState({
