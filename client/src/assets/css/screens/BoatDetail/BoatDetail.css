@@ -1,0 +1,158 @@
+.detail-container {
+  box-sizing: border-box;
+  background-color: #202020;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+.boat-picture {
+  width: 70vw;
+  z-index: 10;
+}
+
+.info-card {
+  /* font-family: '', sans-serif; */
+  width: 60vw;
+  margin: 0px auto;
+  justify-content: center;
+}
+
+.detail-make {
+  font-size: 1.1rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.detail-model {
+  font-size: 1.1rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.detail-designer {
+  font-size: 1.1rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.detail-loa {
+  font-size: 1.1rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.detail-build {
+  font-size: 1.1rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.detail-price {
+  font-size: 1.1rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.detail-description-card {
+  /* font-family: '', sans-serif; */
+  font-size: 1rem;
+  display: flex;
+}
+
+.detail-description {
+  /* font-family: '', sans-serif; */
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.details-buttons{
+  display: flex;
+  width: 60vw;
+  margin: 10px auto;
+  justify-content: space-evenly;
+}
+
+.detail-edit, 
+.detail-delete {
+  margin-top: 10px;
+  width: 100px;
+  height: 33px;
+  /* font-family: '', cursive; */
+  border: none;
+  font-size: 1rem;
+  background-color: #797979;
+  color: white;
+}
+
+
+.detail-edit:active, 
+.detail-delete:active {
+  opacity: 50%;
+  border: 2px solid rgb(46,139,87);
+}
+
+.detail-edit:hover, 
+.detail-delete:hover {
+  color: black;
+}
+
+@media only screen and (min-width: 800px) {
+
+  .detail-card{
+    width: 60vw;
+    display: flex;
+    z-index: 0;    
+    position: relative;
+    margin-top: -15vh;
+  }
+
+  .detail-art {
+    width: 25vw;
+    z-index: 0;
+    position: relative;
+  }
+
+  .detail-information-card{
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30vw;
+    height: fit-content;
+  }
+
+  .detail-title {
+    font-size: 2.5rem;
+    width: 20vw;
+    margin: 0 auto;
+  }
+
+  .detail-brand-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .detail-price {
+    font-size: 1.8rem
+  }
+
+  .detail-description-card {
+    /* font-family: '', sans-serif; */
+    font-size: 1rem;
+    display: flex;
+  }
+  
+  .detail-description {
+    /* font-family: '', sans-serif; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
