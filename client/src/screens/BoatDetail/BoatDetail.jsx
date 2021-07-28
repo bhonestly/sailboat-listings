@@ -25,12 +25,12 @@ export default function BoatDetail({ handleDelete }) {
       <img className="boat-picture" src={boat.img_url} alt={boat.model} />
       <div className="info-card">
         <div className="boat-details">
-          <p> Make: {boat.make.name} </p>
-          <p> Model: {boat.model} </p>
-          <p> Designer: {boat.designer} </p>
-          <p> Length Overall: {boat.loa} </p>
-          <p> Built: {boat.build_year} </p>
-          <p> Price:{boat.price}</p>
+          <p className="detail-make"> Make: {boat.make.name} </p>
+          <p className="detail-model"> Model: {boat.model} </p>
+          <p className="detail-designer"> Designer: {boat.designer} </p>
+          <p className="detail-loa"> Length Overall: {boat.loa} </p>
+          <p className="detail-build"> Built: {boat.build_year} </p>
+          <p className="detail-price"> Price:{boat.price}</p>
         </div>
         <div className="description-card">
           <div className="detail-description">Description: {boat.description}</div>

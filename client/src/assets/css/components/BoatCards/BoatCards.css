@@ -1,0 +1,104 @@
+.boat-image {
+  width: 165px;
+  height: 225px;
+}
+
+.boat-container {
+  display: flex;
+  margin: 10px auto;
+  width: 165px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boat-cards-individuals {
+  padding-bottom: 10px;
+}
+
+.boat-make {
+  font-size: 1rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+}
+
+.boat-model {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+
+.boat-designer {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+
+.boat-loa {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+
+.boat-build-year {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+
+.boat-price {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (min-width: 800px) {
+
+  .boat-cards-individuals {
+    display: flex;
+    flex-direction: row;
+    width: 28vw;
+    padding: 0px;
+  }
+
+  .boat-container {
+    width: 28vw;
+  }
+
+  .boat-info-container {
+    margin: 0px auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: fit-content;
+    width: 12vw;
+  }
+
+  .boat-make {
+    font-size: 1.5rem;
+  }
+
+  .boat-model {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  .boat-designer {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  .boat-loa {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  .boat-build-year {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  .boat-price {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+}

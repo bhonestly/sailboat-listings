@@ -13,18 +13,51 @@ User.destroy_all
 @user = User.create(
   username: 'ernest',
   email: 'ernestbizzell@gmail.com',
-  password_digest: '123456'
+  password: '123456'
 )
 
-@make = Make.create(
+@make1 = Make.create(
   name: 'Lancer'
+)
+@make2 = Make.create(
+  name: 'Ranger'
+)
+@make3 = Make.create(
+  name: 'Balance'
+)
+@make4 = Make.create(
+  name: 'Laser'
+)
+@make5 = Make.create(
+  name: 'Westsail'
+)
+@make6 = Make.create(
+  name: 'Outremer'
+)
+@make7 = Make.create(
+  name: 'HobieCat'
+)
+@make8 = Make.create(
+  name: 'Rice Brothers'
+)
+@make9 = Make.create(
+  name: 'Richard Miles'
+)
+@make10 = Make.create(
+  name: 'Mach 2 Boats'
+)
+@make11 = Make.create(
+  name: 'Vanguard'
+)
+@make12 = Make.create(
+  name: 'Olson'
 )
 
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/WOuLNA2.jpg',
   description: 'get rid of this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make1,
+  user: @user,
   model: '30-5',
   designer: 'C&C',
   loa: '29.5',
@@ -32,15 +65,11 @@ User.destroy_all
   price: '9,400'
 )
 
-@make = Make.create(
-  name: 'Ranger'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/6useSPB.jpg',
   description: 'got rid of this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make2,
+  user: @user,
   model: '22',
   designer: 'Ranger',
   loa: '22.5',
@@ -48,15 +77,11 @@ User.destroy_all
   price: '9,500'
 )
 
-@make = Make.create(
-  name: 'Balance'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/7lbIEEG.jpg',
   description: 'get this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make3,
+  user: @user,
   model: '526',
   designer: 'Balance',
   loa: '52.5',
@@ -64,15 +89,11 @@ User.destroy_all
   price: '1,600,000'
 )
 
-@make = Make.create(
-  name: 'Laser'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/z5s9hjl.jpg',
   description: 'got rid of this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make4,
+  user: @user,
   model: 'Laser',
   designer: 'Bruce Kirby',
   loa: '11.5',
@@ -80,15 +101,11 @@ User.destroy_all
   price: '2,500'
 )
 
-@make = Make.create(
-  name: 'Westsail'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/j4r6cy8.jpg',
   description: 'got rid of this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make5,
+  user: @user,
   model: '32',
   designer: 'William Atkin',
   loa: '32',
@@ -96,15 +113,11 @@ User.destroy_all
   price: '30,000'
 )
 
-@make = Make.create(
-  name: 'Outremer'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/16SfSit.jpg',
   description: 'not this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make6,
+  user: @user,
   model: '5X',
   designer: 'Barreau/ Neuman',
   loa: '58',
@@ -112,15 +125,11 @@ User.destroy_all
   price: '1,800,000'
 )
 
-@make = Make.create(
-  name: 'HobieCat'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/pXLifyP.jpg',
   description: 'get this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make7,
+  user: @user,
   model: 'Hobie 17',
   designer: 'John Wake',
   loa: '17',
@@ -128,15 +137,11 @@ User.destroy_all
   price: '6,000'
 )
 
-@make = Make.create(
-  name: 'Rice Brothers'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/8WVNatM.jpg',
   description: 'sailed this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make8,
+  user: @user,
   model: 'Gaff-rigged Schooner',
   designer: 'Rice Brothers',
   loa: '133',
@@ -144,15 +149,11 @@ User.destroy_all
   price: '2,995,000'
 )
 
-@make = Make.create(
-  name: 'Richard Miles'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/5Ll7y20.jpg',
   description: 'sailed this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make9,
+  user: @user,
   model: 'Brig',
   designer: 'Ray Wallace',
   loa: '112',
@@ -160,15 +161,11 @@ User.destroy_all
   price: '4,000,000'
 )
 
-@make = Make.create(
-  name: 'Mach 2 Boats'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/Cz2N8sx.png',
   description: 'get this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make10,
+  user: @user,
   model: 'Moth',
   designer: 'Bruce Farr',
   loa: '11',
@@ -176,15 +173,11 @@ User.destroy_all
   price: '10,000'
 )
 
-@make = Make.create(
-  name: 'Vanguard'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/HdlHjSW.jpg',
   description: 'not this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make11,
+  user: @user,
   model: 'Vanguard 15',
   designer: 'Bob Ames',
   loa: '15.25',
@@ -192,15 +185,11 @@ User.destroy_all
   price: '7,500'
 )
 
-@make = Make.create(
-  name: 'Olson'
-)
-
 @boat = Boat.create(
   img_url: 'https://i.imgur.com/hV3aL9z.jpg',
   description: 'get this boat',
-  make_id: @make.id,
-  user_id: @user.id,
+  make: @make12,
+  user: @user,
   model: '30',
   designer: 'George Olson',
   loa: '30',

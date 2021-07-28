@@ -1,0 +1,179 @@
+.boat-create {
+  background-color: #797979;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 100px;
+}
+
+.create-form {
+  margin: 0px auto;
+  background-image: url(https://i.imgur.com/isUQmZH.jpg);
+  background-position: center;
+  width: 70vw;
+  padding: 25px 10px 25px 10px;
+  box-shadow: 3px 3px 3px black;
+}
+
+.create-form-title {
+  color: white;
+  /* font-family: "", cursive; */
+  text-shadow: 2px 2px black;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.create-input-model {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-input-designer {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-input-loa {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-input-build-year {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-input-price {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-input-image-link {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.create-textarea-description {
+  margin: 10px auto;
+  width: 200px;
+  font-size: 1rem;
+  padding: 5px;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.create-submit-button {
+  width: 100px;
+  height: 33px;
+  /* font-family: '', cursive; */
+  border: none;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+}
+
+.create-submit-button:active {
+  opacity: 50%;
+  border: 2px solid rgb(46,139,87);
+}
+
+.create-submit-button:hover {
+  color: rgb(46,139,87);
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .boat-create {
+    background-color: #797979;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+  }
+
+  .create-form {
+    margin: 0px auto;
+    background-color: whitesmoke;
+    width: 35vw;
+    height: 75vh;
+    padding: 25px 10px 25px 10px;
+    box-shadow: 3px 3px 3px black;
+  }
+  
+  .create-form-title {
+    color: white;
+    font-size: 36px;
+    /* font-family: "", cursive; */
+    text-shadow: 2px 2px black;
+    font-size: 2.3rem;
+    font-weight: 500;
+  }
+
+  .create-input-model {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-input-designer {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-input-loa {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-input-build-year {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-input-price {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-input-image-link {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .create-textarea-description {
+    margin: 10px auto;
+    width: 300px;
+    font-size: 1.2rem;
+    padding: 5px;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .create-submit-button {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    /* font-family: "", cursive; */
+    width: 100px;
+  }
+}

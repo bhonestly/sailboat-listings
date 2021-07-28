@@ -1,0 +1,45 @@
+.boats-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 70px;
+}
+
+
+a {
+  text-decoration: none;
+  /* font-family: "", sans-serif; */
+  font-weight: bolder;
+}
+
+.sort {
+  position: relative;
+  padding: 15px 0;
+  margin-left: 50%;
+  /* font-family: "", sans-serif; */
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+
+  .sort {
+    position: relative;
+    padding: 20px 0 ;
+    margin-left: 75%;
+    /* font-family: "", sans-serif; */
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .sort-container{
+    padding: 0;
+    width: 100vw;
+    height: fit-content;
+    /* font-family: "", cursive; */
+    border: none;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+  }
+}

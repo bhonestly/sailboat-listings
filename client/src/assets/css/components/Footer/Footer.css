@@ -7,7 +7,7 @@
   display: flex;
   flex: 1;
   margin-top: auto;
-  z-index: 100;
+  z-index: 1;
   height: fit-content;
 }
 
