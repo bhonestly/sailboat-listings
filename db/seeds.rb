@@ -43,7 +43,7 @@ User.destroy_all
   user_id: @user.id,
   model: '22',
   designer: 'Ranger',
-  loa: '21.5',
+  loa: '22.5',
   build_year: '1978',
   price: '9,500'
 )
