@@ -1,16 +1,15 @@
 class BoatsController < ApplicationController
-  before_action :set_boat, only: [:show, :update, :destroy]
+  before_action :set_boat, only: %i[show update destroy]
 
   # GET /boats
   def index
     @boats = Boat.all
-
-    render json: @boats
+    render json: @boats, include: :make
   end
 
   # GET /boats/1
   def show
-    render json: @boat
+    render json: @boat, include: :make
   end
 
   # POST /boats
@@ -18,7 +17,7 @@ class BoatsController < ApplicationController
     @boat = Boat.new(boat_params)
 
     if @boat.save
-      render json: @boat, status: :created, location: @boat
+      render json: @boat, include: :make, status: :created, location: @boat
     else
       render json: @boat.errors, status: :unprocessable_entity
     end
@@ -27,7 +26,7 @@ class BoatsController < ApplicationController
   # PATCH/PUT /boats/1
   def update
     if @boat.update(boat_params)
-      render json: @boat
+      render json: @boat, include: :make
     else
       render json: @boat.errors, status: :unprocessable_entity
     end
@@ -39,13 +38,14 @@ class BoatsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_boat
-      @boat = Boat.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def boat_params
-      params.require(:boat).permit(:make_id, :model, :designer, :loa, :build_year, :price, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_boat
+    @boat = Boat.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def boat_params
+    params.require(:boat).permit(:make_id, :model, :designer, :loa, :build_year, :price, :user_id, :description, :img_url)
+  end
 end
